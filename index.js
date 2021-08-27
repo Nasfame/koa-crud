@@ -15,6 +15,7 @@ let countries = ['India', 'UAE', 'US']
 app.use(json())
 app.use(bodyparser())
 app.use(router.routes()).use(router.allowedMethods())
+//app.use(bodyParser.urlencoded({ extended: true })) for forms in html 
 
 render(app, {
     root: path.join(__dirname, 'views'),
@@ -44,6 +45,7 @@ router.post('/add', add)
 //Controllers
 async function add(ctx) {
     const body = ctx.request.body
+    console.log(body)
     const country = body.country
     countries.push(country)
     ctx.redirect('/')

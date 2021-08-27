@@ -4,6 +4,6 @@ GET http://localhost:9897/
 GET http://localhost:9897/test
 
 ###
-GET http://localhost:9897/add
+POST http://localhost:9897/add
 
 
